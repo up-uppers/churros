@@ -8,8 +8,12 @@
             <mat-card-title style="font-size: 15px;">Descrição: {{produto.description}}</mat-card-title>
         </mat-card-header>
         <mat-card-content>
-            <mat-card><img  width="50%" height="50%" mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"></mat-card>
-        
+            <div class="image">
+                <img  width="50%" height="50%" mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+            </div>
         </mat-card-content>
+        <mat-card-actions class="card-footer">
+            <a mat-raised-button color="warn" (click)="deletar()">Deletar Produto</a>
+        </mat-card-actions>
     </mat-card>
 </div>
