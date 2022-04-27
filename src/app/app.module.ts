@@ -19,7 +19,7 @@ import { CriarProdutosComponent } from './components/produtos/criar-produtos/cri
 import { VerProdutosComponent } from './components/produtos/ver-produtos/ver-produtos.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -31,7 +31,7 @@ import {MatCardModule} from '@angular/material/card';
     FooterComponent,
     ListarProdutosComponent,
     CriarProdutosComponent,
-    VerProdutosComponent
+    VerProdutosComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,7 +44,8 @@ import {MatCardModule} from '@angular/material/card';
     MatListModule,
     MatMenuModule,
     MatGridListModule,
-    MatCardModule
+    MatCardModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

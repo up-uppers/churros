@@ -8,10 +8,11 @@ import { Produto } from "../models/produto.model";
 })
 
 export class ProdutoService {
+    constructor(private http: HttpClient) { }
+
     private baseUrl = "http://localhost:3009" 
     // json server
 
-    constructor(private http: HttpClient) { }
 
     listar(): Observable<Produto[]> {
         return this.http.get<Produto[]>(`${this.baseUrl}/products`)
