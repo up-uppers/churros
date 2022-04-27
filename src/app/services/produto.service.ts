@@ -27,4 +27,8 @@ export class ProdutoService {
   ver(id: number): Observable<Produto> {
     return this.http.get<Produto>(`${this.baseUrl}/products/${id}`);
   }
+
+  deletar(id: number): Observable<Produto> {
+    return this.http.delete<Produto>(`${this.baseUrl}/products/${id}`);
+  }
 }
