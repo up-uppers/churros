@@ -1,0 +1,67 @@
+{
+  "products": [
+    {
+      "name": "churros de chocolate",
+      "description": "hmmm",
+      "price": 5,
+      "type": "churros",
+      "id": 1
+    },
+    {
+      "name": "churros de chocolate",
+      "description": "hmmm",
+      "price": 5,
+      "type": "churros",
+      "id": 2
+    },
+    {
+      "name": "churros de chocolate",
+      "description": "hmmm",
+      "price": 5,
+      "type": "churros",
+      "id": 3
+    },
+    {
+      "name": "churros de chocolate",
+      "description": "hmmm",
+      "price": 5,
+      "type": "churros",
+      "id": 4
+    },
+    {
+      "name": "churros de chocolate",
+      "description": "hmmm",
+      "price": 5,
+      "type": "churros",
+      "id": 5
+    },
+    {
+      "name": "churros de chocolate",
+      "description": "hmmm",
+      "price": 5,
+      "type": "churros",
+      "id": 6
+    },
+    {
+      "name": "churros bom",
+      "description": "muito bom hmmmmmmmmuito bom hmmmmmmmmuito bom hmmmmmmmmuito bom hmmmmmmmmuito bom hmmmmmmm",
+      "type": "churros",
+      "price": 12,
+      "id": 7
+    },
+    {
+      "name": "churros bom",
+      "description": "bombombombom",
+      "type": "churros'",
+      "price": 12,
+      "id": 8
+    },
+    {
+      "name": "churros bom",
+      "description": "bombombombom",
+      "type": "churros",
+      "price": 12,
+      "id": 9
+    }
+  ]
+}
