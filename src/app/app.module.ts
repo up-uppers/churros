@@ -14,6 +14,9 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav'
 import {MatListModule} from '@angular/material/list';
 import {MatMenuModule} from '@angular/material/menu';
+import { ListarProdutosComponent } from './components/produtos/listar-produtos/listar-produtos.component';
+import { CriarProdutosComponent } from './components/produtos/criar-produtos/criar-produtos.component';
+import { VerProdutosComponent } from './components/produtos/ver-produtos/ver-produtos.component';
 
 
 
@@ -23,7 +26,10 @@ import {MatMenuModule} from '@angular/material/menu';
     HomeComponent,
     NavComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ListarProdutosComponent,
+    CriarProdutosComponent,
+    VerProdutosComponent
   ],
   imports: [
     BrowserModule,
