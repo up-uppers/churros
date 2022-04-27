@@ -17,7 +17,12 @@ import {MatMenuModule} from '@angular/material/menu';
 import { ListarProdutosComponent } from './components/produtos/listar-produtos/listar-produtos.component';
 import { CriarProdutosComponent } from './components/produtos/criar-produtos/criar-produtos.component';
 import { VerProdutosComponent } from './components/produtos/ver-produtos/ver-produtos.component';
-
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatCardModule} from '@angular/material/card';
+import { HttpClientModule } from '@angular/common/http';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -29,7 +34,7 @@ import { VerProdutosComponent } from './components/produtos/ver-produtos/ver-pro
     FooterComponent,
     ListarProdutosComponent,
     CriarProdutosComponent,
-    VerProdutosComponent
+    VerProdutosComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +45,13 @@ import { VerProdutosComponent } from './components/produtos/ver-produtos/ver-pro
     MatButtonModule,
     MatSidenavModule,
     MatListModule,
-    MatMenuModule
+    MatMenuModule,
+    MatGridListModule,
+    MatCardModule,
+    HttpClientModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

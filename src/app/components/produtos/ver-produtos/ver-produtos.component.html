@@ -1,1 +1,17 @@
-<p>ver-produtos works!</p>
+<div class="main">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h1 class="title"></h1>
+    </div>
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title >{{produto.name}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+            <p>{{produto.description}}</p>
+        </mat-card-content>
+        <mat-card-actions class="card-footer">
+            <a mat-button routerLink="/produto/{{ produto.id }}">Ver Produto</a>
+        </mat-card-actions>
+    </mat-card>
+</div>
