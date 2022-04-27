@@ -1,1 +1,27 @@
-<p>criar-produtos works!</p>
+<div style="text-align: center;">
+    <mat-card>
+        <mat-card style="text-align: center; margin-top: 20px;">
+            <h3>Cadastro de produtos</h3>
+            <mat-form-field class="example-full-width mgInput" appearance="fill">
+                <mat-label for="nome">Nome</mat-label>
+                <input matInput name="nome" [(ngModel)]="name" >
+            </mat-form-field><br>
+            <mat-form-field class="example-full-width mgInput" appearance="fill">
+                <mat-label for="descricao">Descrição</mat-label>
+                <input matInput name="descricao" [(ngModel)]="description" >
+            </mat-form-field><br>
+            <mat-form-field class="example-full-width mgInput" appearance="fill">
+                <mat-label for="tipo">Tipo</mat-label>
+                <input matInput name="tipo" [(ngModel)]="type">
+            </mat-form-field><br>
+            <mat-form-field class="example-full-width mgInput" appearance="fill">
+                <mat-label for="price">Preço</mat-label>
+                <input type="number" matInput name="price" [(ngModel)]="price">
+            </mat-form-field><br>
+           
+            <div>
+                <button (click)="cadastrarProduto()" mat-raised-button color="primary">Cadastrar</button>
+            </div>
+        </mat-card>
+    </mat-card>
+</div>
