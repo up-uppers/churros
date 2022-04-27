@@ -1,10 +1,10 @@
 {
   "products": [
     {
-      "name": "churros de chocolate",
-      "description": "hmmm",
-      "price": 5,
-      "type": "churros",
+      "name": "A",
+      "description": "A",
+      "type": "A",
+      "price": 1,
       "id": 1
     },
     {
@@ -44,7 +44,7 @@
     },
     {
       "name": "churros bom",
-      "description": "muito bom hmmmmmmmmuito bom hmmmmmmmmuito bom hmmmmmmmmuito bom hmmmmmmmmuito bom hmmmmmmm",
+      "description": "EDIÇÃO TESTE",
       "type": "churros",
       "price": 12,
       "id": 7
@@ -62,6 +62,20 @@
       "type": "churros",
       "price": 12,
       "id": 9
+    },
+    {
+      "name": "Churros Goiaba",
+      "description": "Churros com muita goiaba",
+      "type": "Churros",
+      "price": 9,
+      "id": 10
+    },
+    {
+      "name": "Churros de Chocolate com Aveia",
+      "description": "Vem mais aveia do que chocolate",
+      "type": "Churros",
+      "price": 9,
+      "id": 11
     }
   ]
 }
