@@ -1,10 +1,15 @@
 .main{
-    padding: 25px;
+    padding: 40px;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap; 
 }
 
 .example-card {
     max-width: 250px;
-    margin: 20px;
+    margin: 5px;
 }
   
 .example-header-image {
