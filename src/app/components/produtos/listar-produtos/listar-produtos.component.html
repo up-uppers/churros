@@ -1,1 +1,15 @@
-<p>listar-produtos works!</p>
+<div class="main">
+    <h3>Nossos melhores produtos!</h3>
+    <mat-grid-list cols="4" rowHeight="1:1" >
+        <mat-grid-tile *ngFor="let produto of produtos">
+            <mat-card class="example-card">
+                <mat-card-title >{{produto.name}}</mat-card-title>
+                <mat-card-content>
+                </mat-card-content>
+                <mat-card-actions class="card-footer">
+                    <a mat-button [routerLink]="['/produto',produto.id]">Ver</a>
+                </mat-card-actions>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
