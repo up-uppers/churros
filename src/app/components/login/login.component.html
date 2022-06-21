@@ -1,0 +1,19 @@
+<div style="text-align: center;">
+    <mat-card style="text-align: center; margin-top: 20px;">
+        <h3>Entrar!</h3>
+        <h4>Acesse sua conta.</h4>
+        <mat-form-field class="example-full-width mgInput" appearance="fill">
+            <mat-label for="email">Email</mat-label>
+            <input matInput name="email" [(ngModel)]="email" >
+        </mat-form-field><br>
+        <mat-form-field class="example-full-width mgInput" appearance="fill">
+            <mat-label for="password">Senha</mat-label>
+            <input matInput name="password" [(ngModel)]="password" >
+        </mat-form-field><br>
+
+        <mat-card-actions>
+            <button [routerLink]="['/register']" mat-button color="primary">registrar-se</button>
+            <button (click)="login()" mat-raised-button color="primary">entrar</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

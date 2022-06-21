@@ -27,6 +27,7 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatTabsModule } from '@angular/material/tabs';
 import { EditarProdutoComponent } from './components/produtos/editar-produto/editar-produto.component';
 import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { RegisterComponent } from './components/register/register.component';
     VerProdutosComponent,
     EditarProdutoComponent,
     RegisterComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

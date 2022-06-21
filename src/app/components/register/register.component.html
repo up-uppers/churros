@@ -18,8 +18,9 @@
             <input matInput name="confirmPassword" [(ngModel)]="confirmPassword" >
         </mat-form-field><br>
 
-        <div>
+        <mat-card-actions>
+            <button [routerLink]="['/login']" mat-button color="primary">login</button>
             <button (click)="register()" mat-raised-button color="primary">cadastrar</button>
-        </div>
+        </mat-card-actions>
     </mat-card>
 </div>
