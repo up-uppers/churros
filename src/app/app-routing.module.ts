@@ -2,12 +2,14 @@ import { EditarProdutoComponent } from './components/produtos/editar-produto/edi
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
+import { RegisterComponent } from './components/register/register.component';
 import { CriarProdutosComponent } from './components/produtos/criar-produtos/criar-produtos.component';
 import { ListarProdutosComponent } from './components/produtos/listar-produtos/listar-produtos.component';
 import { VerProdutosComponent } from './components/produtos/ver-produtos/ver-produtos.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'register', component: RegisterComponent },
   { path: 'produtos', component: ListarProdutosComponent },
   { path: 'produto-create', component: CriarProdutosComponent },
   { path: 'produto/:id', component: VerProdutosComponent },

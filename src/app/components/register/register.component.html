@@ -1,0 +1,25 @@
+<div style="text-align: center;">
+    <mat-card style="text-align: center; margin-top: 20px;">
+        <h3>Crie sua conta! :)</h3>
+        <mat-form-field class="example-full-width mgInput" appearance="fill">
+            <mat-label for="nome">Nome</mat-label>
+            <input matInput name="nome" [(ngModel)]="name" >
+        </mat-form-field><br>
+        <mat-form-field class="example-full-width mgInput" appearance="fill">
+            <mat-label for="email">Email</mat-label>
+            <input matInput name="email" [(ngModel)]="email" >
+        </mat-form-field><br>
+        <mat-form-field class="example-full-width mgInput" appearance="fill">
+            <mat-label for="password">Senha</mat-label>
+            <input matInput name="password" [(ngModel)]="password" >
+        </mat-form-field><br>
+        <mat-form-field class="example-full-width mgInput" appearance="fill">
+            <mat-label for="confirmPassword">Confirmar Senha</mat-label>
+            <input matInput name="confirmPassword" [(ngModel)]="confirmPassword" >
+        </mat-form-field><br>
+
+        <div>
+            <button (click)="register()" mat-raised-button color="primary">cadastrar</button>
+        </div>
+    </mat-card>
+</div>
