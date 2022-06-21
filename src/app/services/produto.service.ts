@@ -9,26 +9,26 @@ import { Produto } from '../models/produto.model';
 export class ProdutoService {
   constructor(private http: HttpClient) {}
 
-  private baseUrl = 'http://localhost:3009';
+  private baseUrl = 'http://localhost:3000';
   // json server
 
   listar(): Observable<Produto[]> {
-    return this.http.get<Produto[]>(`${this.baseUrl}/products`);
+    return this.http.get<Produto[]>(`${this.baseUrl}/product`);
   }
 
   criar(produto: Produto): Observable<Produto> {
-    return this.http.post<Produto>(`${this.baseUrl}/products`, produto);
+    return this.http.post<Produto>(`${this.baseUrl}/product`, produto);
   }
 
   editar(id: number, produto: Produto): Observable<Produto> {
-    return this.http.put<Produto>(`${this.baseUrl}/products/${id}`, produto);
+    return this.http.put<Produto>(`${this.baseUrl}/product/${id}`, produto);
   }
 
   ver(id: number): Observable<Produto> {
-    return this.http.get<Produto>(`${this.baseUrl}/products/${id}`);
+    return this.http.get<Produto>(`${this.baseUrl}/product/${id}`);
   }
 
   deletar(id: number): Observable<Produto> {
-    return this.http.delete<Produto>(`${this.baseUrl}/products/${id}`);
+    return this.http.delete<Produto>(`${this.baseUrl}/product/${id}`);
   }
 }
