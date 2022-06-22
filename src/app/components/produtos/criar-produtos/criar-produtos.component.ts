@@ -29,7 +29,6 @@ export class CriarProdutosComponent implements OnInit {
     }
 
     this.service.criar(produto).subscribe((produto) => {
-      console.log(produto)
       this.router.navigate(["/produtos"]);
     })
   }

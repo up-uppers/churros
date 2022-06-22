@@ -1,7 +1,7 @@
 <div class="nav-color">
     <a mat-button routerLink="/" color="primary">Home</a>
-    <a mat-button routerLink="produtos" color="primary">Listar Produtos</a>
-    <a mat-button routerLink="produto-create" color="primary">Criar Produto</a>
+    <a mat-button *ngIf="authService.isAuthenticated()" routerLink="produtos" color="primary">Listar Produtos</a>
+    <a mat-button *ngIf="authService.isAdmin()" routerLink="produto-create" color="primary">Criar Produto</a>
 </div>
 
 

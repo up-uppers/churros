@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Profile } from 'src/app/models/profile.model';
 import { User } from 'src/app/models/user.model';
 import { AuthService } from 'src/app/services/auth.service';
 
@@ -25,11 +26,11 @@ export class RegisterComponent implements OnInit {
       name: this.name,
       email: this.email,
       password: this.password,
-      confirmPassword: this.confirmPassword
+      confirmPassword: this.confirmPassword,
+      profile: new Profile()
     }
 
     this.service.registrar(user).subscribe((user) => {
-      console.log(user)
       this.router.navigate(["/produtos"]);
     })
     console.log('register')

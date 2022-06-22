@@ -9,7 +9,7 @@ import { User } from '../models/user.model';
 export class UserService {
   constructor(private http: HttpClient) {}
 
-  private baseUrl = 'http://localhost:3000';
+  private baseUrl = 'http://localhost:3009';
   // json server
 
   listar(): Observable<User[]> {

@@ -9,7 +9,7 @@ import { Produto } from '../models/produto.model';
 export class ProdutoService {
   constructor(private http: HttpClient) {}
 
-  private baseUrl = 'http://localhost:3000';
+  private baseUrl = 'http://localhost:3009';
   // json server
 
   listar(): Observable<Produto[]> {
