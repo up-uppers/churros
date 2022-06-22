@@ -1,13 +1,14 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Produto } from '../models/produto.model';
+import { AuthService } from './auth.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ProdutoService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, public authService: AuthService) {}
 
   private baseUrl = 'http://localhost:3009';
   // json server
@@ -17,11 +18,23 @@ export class ProdutoService {
   }
 
   criar(produto: Produto): Observable<Produto> {
-    return this.http.post<Produto>(`${this.baseUrl}/product`, produto);
+    let headers = new HttpHeaders();
+
+    if (this.authService.isAuthenticated() && this.authService.isAdmin()){
+      headers = headers.set('Authorization', `Bearer ${this.authService.logedUser.token}`);
+    }
+
+    return this.http.post<Produto>(`${this.baseUrl}/product`, produto, { headers: headers });
   }
 
   editar(id: number, produto: Produto): Observable<Produto> {
-    return this.http.put<Produto>(`${this.baseUrl}/product/${id}`, produto);
+    let headers = new HttpHeaders();
+
+    if (this.authService.isAuthenticated() && this.authService.isAdmin()){
+      headers = headers.set('Authorization', `Bearer ${this.authService.logedUser.token}`);
+    }
+
+    return this.http.put<Produto>(`${this.baseUrl}/product/${id}`, produto, { headers: headers });
   }
 
   ver(id: number): Observable<Produto> {
@@ -29,6 +42,12 @@ export class ProdutoService {
   }
 
   deletar(id: number): Observable<Produto> {
-    return this.http.delete<Produto>(`${this.baseUrl}/product/${id}`);
+    let headers = new HttpHeaders();
+
+    if (this.authService.isAuthenticated() && this.authService.isAdmin()){
+      headers = headers.set('Authorization', `Bearer ${this.authService.logedUser.token}`);
+    }
+
+    return this.http.delete<Produto>(`${this.baseUrl}/product/${id}`, { headers: headers });
   }
 }

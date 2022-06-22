@@ -7,4 +7,5 @@
     <span class="example-spacer"></span>
     <button [routerLink]="['/login']" *ngIf="!authService.isAuthenticated()" mat-icon-button >Login</button>
     <button (click)="logout()" *ngIf="authService.isAuthenticated()" mat-icon-button >Log out</button>
+    <label *ngIf="authService.isAuthenticated()">{{ name }}</label>
 </mat-toolbar>

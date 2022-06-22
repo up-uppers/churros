@@ -38,6 +38,10 @@ export class AuthService implements CanActivate {
     return this.isAuthenticated() && papel === "admin";
   }
 
+  public userName(): string {
+    return this.logedUser.name
+  }
+
   login(email: string, password: string): Observable<User> {
     return this.http.post<User>(`${this.baseUrl}/auth/login`, { email: email, password: password }).pipe(tap((user) => {
       this.logedUser = user
@@ -47,7 +51,7 @@ export class AuthService implements CanActivate {
   logout(){
     try {
       this.logedUser = new User();
-      this.location.back();
+      this.location.go('/home')
     } catch (err) {
       console.error(err);
     }

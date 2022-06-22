@@ -24,7 +24,6 @@ export class CriarProdutosComponent implements OnInit {
     let produto :  Produto = {
       name: this.name,
       description: this.description,
-      type: this.type,
       price: this.price
     }
 

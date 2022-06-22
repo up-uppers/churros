@@ -29,7 +29,6 @@ export class EditarProdutoComponent implements OnInit {
       console.log(produto);
       this.name = produto.name;
       this.description = produto.description;
-      this.type = produto.type;
       this.price = produto.price;
     });
   }
@@ -38,7 +37,6 @@ export class EditarProdutoComponent implements OnInit {
     let produto: Produto = {
       name: this.name,
       description: this.description,
-      type: this.type,
       price: this.price,
     };
 
