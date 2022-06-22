@@ -28,6 +28,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { EditarProdutoComponent } from './components/produtos/editar-produto/editar-produto.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
+import { CadastrosComponent } from './components/cadastros/cadastros.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { LoginComponent } from './components/login/login.component';
     EditarProdutoComponent,
     RegisterComponent,
     LoginComponent,
+    CadastrosComponent,
   ],
   imports: [
     BrowserModule,

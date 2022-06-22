@@ -14,7 +14,7 @@ export class EditarProdutoComponent implements OnInit {
   description!: string;
   price!: number;
 
-  produtoId!: number;
+  produtoId!: string;
 
   constructor(
     private router: Router,
@@ -25,8 +25,8 @@ export class EditarProdutoComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log(this.produtoId)
     this.service.ver(this.produtoId).subscribe((produto) => {
-      console.log(produto);
       this.name = produto.name;
       this.description = produto.description;
       this.price = produto.price;

@@ -13,7 +13,7 @@
             </div>
         </mat-card-content>
         <mat-card-actions class="card-footer">
-            <a mat-raised-button color="warn" (click)="deletar()">Deletar Produto</a>
+            <a  mat-raised-button color="warn" *ngIf="authService.isAdmin()" (click)="deletar()">Deletar Produto</a>
         </mat-card-actions>
     </mat-card>
 </div>

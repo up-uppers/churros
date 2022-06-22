@@ -27,7 +27,7 @@ export class ProdutoService {
     return this.http.post<Produto>(`${this.baseUrl}/product`, produto, { headers: headers });
   }
 
-  editar(id: number, produto: Produto): Observable<Produto> {
+  editar(id: string, produto: Produto): Observable<Produto> {
     let headers = new HttpHeaders();
 
     if (this.authService.isAuthenticated() && this.authService.isAdmin()){
@@ -37,11 +37,17 @@ export class ProdutoService {
     return this.http.put<Produto>(`${this.baseUrl}/product/${id}`, produto, { headers: headers });
   }
 
-  ver(id: number): Observable<Produto> {
-    return this.http.get<Produto>(`${this.baseUrl}/product/${id}`);
+  ver(id: string): Observable<Produto> {
+    let headers = new HttpHeaders();
+
+    if (this.authService.isAuthenticated() && this.authService.isAdmin()){
+      headers = headers.set('Authorization', `Bearer ${this.authService.logedUser.token}`);
+    }
+
+    return this.http.get<Produto>(`${this.baseUrl}/product/${id}`, { headers: headers });
   }
 
-  deletar(id: number): Observable<Produto> {
+  deletar(id: string): Observable<Produto> {
     let headers = new HttpHeaders();
 
     if (this.authService.isAuthenticated() && this.authService.isAdmin()){

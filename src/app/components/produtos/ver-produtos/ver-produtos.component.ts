@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Produto } from 'src/app/models/produto.model';
+import { AuthService } from 'src/app/services/auth.service';
 import { ProdutoService } from 'src/app/services/produto.service';
 
 @Component({
@@ -11,12 +12,13 @@ import { ProdutoService } from 'src/app/services/produto.service';
 export class VerProdutosComponent implements OnInit {
 
   produto!: Produto;
-  produto_id!: number
+  produto_id!: string
 
   constructor(
     private router: Router,
     private service: ProdutoService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    public authService: AuthService
   ) { 
     this.route.params.subscribe(params => this.produto_id = params['id']);
   }

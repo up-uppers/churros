@@ -16,7 +16,7 @@
         </mat-card-content>
         <mat-card-actions class="card-footer">
           <a mat-button routerLink="/produto/{{ produto._id }}">Ver Produto</a>
-          <a mat-button routerLink="/produto-editar/{{ produto._id }}">Editar</a>
+          <a mat-button *ngIf="authService.isAdmin()" routerLink="/produto-editar/{{ produto._id }}">Editar</a>
         </mat-card-actions>
       </mat-card>
     </div>
